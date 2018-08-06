@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">订单跟踪1.01版本功能介绍</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">1.无需注册输入供应商提供的订单号，即可随时查询到您订单的生产状态 </view>
+      <view style='text-align:center'>
+        <image class="weui-article__img" src="../../images/find.png" mode="widthFix" />
+        <view class="sayabout">查询界面</view>
+        <image class="weui-article__img" src="../../images/detai.png" mode="widthFix" />
+        <view class="sayabout"> 查询结果</view>
+        <view class="sayabout">（工序及状态栏可左右拖动）</view>
+      </view>
+
+      <view class="weui-article__h1">2. 注册界面，输入相应的信息并付款即可注册成功。</view>
+      <view style='text-align:center'>
+        <image class="weui-article__img" src="../../images/reg.png" mode="widthFix" />
+        <view class="sayabout">注册界面</view>
+      </view>
+      <view class="weui-article__h1">3. 注册后可添加订单，管理订单。订单提交后，客户即可查询订单状态。</view>
+      <view class="weui-article__h1">注:（1）客户名称不会显示在查询结果，用户可直接使用客户或者品牌简称。
+
+      </view>
+      <view class="weui-article__h1">
+        （2）由于手机屏幕宽度限制，只设置了4步工序，用户可根据自身工序工艺，选择主要工序进行输入。
+      </view>
+
+
+      <view style='text-align:center'>
+        <image class="weui-article__img" src="../../images/add.jpg" mode="widthFix" />
+        <view class="sayabout">后台订单输入界面</view>
+      </view>
+
+      <view style='text-align:center'>
+        <image class="weui-article__img" src="../../images/mana.png" mode="widthFix" />
+        <view class="sayabout">订单管理界面</view>
+      </view>
+
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+
+<import src="../../component/toastTest/toastTest.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+
+
+
+<view bindtap="bindViewTap" class="logo">
+  <image class="logo-avatar" mode='widthFix' background-size="cover" src='../../images/logo.jpg'></image>
+</view>
+
+<view class="inputView" style="margin-top:10%">
+  <input class="input"  placeholder="输入账号" placeholder-style="color: #aab2bd" bindinput='inputId' value='{{id}}' />
+</view>
+<view class="inputView" style="margin-top:5%">
+  <input class="input" placeholder="公司名称" placeholder-style="color: #aab2bd" bindinput='inputCname' value='{{id}}' />
+</view>
+<view class="inputView" style="margin-top:5%">
+  <input class="input" type='nubmer' placeholder="手机号码" placeholder-style="color: #aab2bd" bindinput='inputPhone' value='{{id}}' />
+</view>
+<view class="inputView" style="margin-top:5%">
+  <input class="input" type="password" placeholder="密码最少6位，包含数字和字母" placeholder-style="color: #aab2bd" bindinput='inputPwd' value='{{id}}' />
+</view>
+<view class="inputView" style="margin-top:5%">
+  <input class="input" type="password" placeholder="重新输入密码" placeholder-style="color: #aab2bd" bindinput='inputRepwd' value='{{id}}' />
+</view>
+
+    
+<button class="search-bt" bindtap='register'> 注册
+ <!-- <view class="weui-cell__bd" >
+    <view style="display: inline-block; vertical-align: middle;font-size:25px" >注册</view>
+    <view class="weui-badge" style="font-size:15px">¥15</view>
+    <view style="display: inline-block;;text-decoration:line-through; margin-lef:5px;vertical-align: middle;font-size:12px">价格:¥30.00</view>
+  </view>
+   <view style="display: inline-block; vertical-align: middle">一次付费，永久使用</view> -->
+
+
+</button>

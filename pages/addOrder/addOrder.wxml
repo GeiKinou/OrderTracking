@@ -1,0 +1,67 @@
+<import src="../../component/toastTest/toastTest.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+
+<view class="table">
+  <view class="tr_s bg-w">
+    <view class="th_s">
+     <input placeholder='输入客户名称' bindinput='inGuestName'></input>
+     
+    </view>
+    <view class="th_s">
+     <input placeholder='输入订单号' bindinput='inId'></input>
+     </view>
+  </view>
+  <scroll-view scroll-x="true" class="tr bg-w">
+    <view class="th_N"> <input  value='产品' disabled='{{true}}'></input></view>
+    <view class="th ">   <input  value='数量' disabled='{{true}}'></input></view>
+    <view class="th">
+      <input placeholder='添加' bindinput='inType1' value='{{type1}}'></input>
+    </view>
+    <view class="th ">
+      <input placeholder='添加' bindinput='inType2' value='{{type2}}'></input>
+    </view>
+    <view class="th">
+      <input placeholder='添加' bindinput='inType3' value='{{type3}}'></input>
+    </view>
+    <view class="th ">
+      <input placeholder='添加' bindinput='inType4' value='{{type4}}'></input>
+    </view>
+  </scroll-view>
+</view>
+<block wx:for="{{listData}}">
+  <scroll-view scroll-x="true" class="tr bg-g">
+    <view class="td_N">
+      <input placeholder='添加' bindinput='inName' data-idx='{{index}}'></input>
+    </view>
+    <view class="td">
+      <input placeholder='添加' bindinput='inNum' data-idx='{{index}}'></input>
+    </view>
+    
+    <view class="td" wx:for="{{item.types}}" wx:for-index="idx">
+      <checkbox-group bindchange="checkboxChange" data-row='{{index}}' data-col='{{idx}}'>
+        <checkbox style=' margin-bottom:2px' checked='{{item.t}}' disabled='{{ifModify}}'></checkbox>
+      </checkbox-group>
+   
+    </view>
+  </scroll-view>
+</block>
+<view class="weui-cells weui-cells_after-title" wx:if="{{!ifMoren}}">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">是否设为默认流程</view>
+    <view class="weui-cell__ft">
+      <switch bindchange="switchChange" />
+    </view>
+  </view>
+</view>
+<!-- <view class="weui-cells__title" ><input placeholder='输入完成时间' bindinput='inputTime'></input></view> -->
+<view class="section">
+  <picker mode="date" value="{{date}}" start="2018-01-01" end="2100-09-01" bindchange="bindDateChange">
+    <view class="weui-cells__title" style='font-size:18px' >
+      请选择订单完成时间: {{time}}
+    </view>
+  </picker>
+</view>
+<view class="weui-cells__title" style='font-size:18px'><input placeholder='请输入备注' bindinput='inputBZ'></input></view>
+<button class='search-bt' bindtap='addList'>添加型号/add item</button>
+<button class='search-bt' bindtap='delList'>删除型号/delete item</button>
+<button class="search-bt" bindtap="save">提交/submit</button>

@@ -1,0 +1,14 @@
+.logo-avatar {
+	width:60%;
+	height: 80rpx;
+  margin-top: 10rpx;
+  margin-right: 300rpx;
+	border-radius: 10%;
+}
+.logo {
+	display: flex;
+	flex-direction: column;
+	padding: 20rpx 0;
+	align-items: center;
+	background:white;
+}

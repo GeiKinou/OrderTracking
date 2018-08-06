@@ -1,0 +1,29 @@
+<import src="../../component/toastTest/toastTest.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+
+<view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+    <text class="userinfo-nickname" wx:if="{{hasUserInfo}}">欢迎你：{{ userInfo.nickName }}</text>
+  </view>
+</view>
+<view>
+  <button class="search-bt" style='opacity:{{opacity}}' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button>
+
+
+  <!-- <button class="search-bt" style='opacity:{{opacity}}' bindtap="register" disabled='{{bt_Ifable}}'> 注册</button> -->
+  <button class="search-bt2" bindtap='ToSayabout' wx:if="{{!hasUserInfo && canIUse}}"> 功能介绍</button>
+  <button class="search-bt" bindtap='ToAbout' wx:if="{{!hasUserInfo && canIUse}}"> 关于我们</button>
+</view>
+<view wx:if="{{hasUserInfo}}">
+  <button class="search-bt" bindtap='ToAdd'> 添加订单</button>
+  <button class="search-bt" bindtap='ToManager'>订单管理</button>
+  <button class="search-bt" bindtap='Tohistory'>查询记录</button>
+  <button class="search-bt1" bindtap='ToSayabout'> 功能介绍</button>
+  <button class="search-bt" bindtap='ToAbout'> 关于我们</button>
+  <button class="search-bt" bindtap='ToFeedback'> 建议与反馈</button>
+  <button class="search-bt" style='opacity:{{opacity}}' bindtap="loginOut" disabled='{{bt_Ifable}}'> 注销</button>
+</view>
+<view class='text' style="margin-top:5%">
+  <view> 欢迎关注我们的公众号 “e汇商服”</view>
+</view>

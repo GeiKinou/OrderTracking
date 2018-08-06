@@ -1,0 +1,28 @@
+<import src="../../component/toastTest/toastTest.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{TopTips}}</view>
+<view bindtap="bindViewTap" class="logo">
+  <image class="logo-avatar" mode='widthFix' src="../../images/logo.jpg" background-size="cover"></image>
+</view>
+
+<view class="inputView" style="margin-top:20%">
+  <input class="input"  placeholder="输入订单号input invoice No." placeholder-style="color: #aab2bd" bindinput='inputId' value='{{id}}' bindfocus="showhistory" />
+</view>
+
+
+
+<button class="search-bt"  bindtap="searchClick" > 查询Track</button>
+
+
+
+<view class='text' >
+  <view>试着输入12345 了解一下</view>
+  <view>Input 12345 to have a try</view>
+</view>
+
+<view class='text' style="margin-top:5%;font-size:15px">
+  <view>欢迎推荐您的其他供应商使用此程序</view>
+  <view>亦可在您的公众号上挂载</view>
+</view>
+
+<!-- <view class="bg"></view> -->

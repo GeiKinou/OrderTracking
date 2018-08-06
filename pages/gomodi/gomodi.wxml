@@ -1,0 +1,96 @@
+<import src="../../component/toastTest/toastTest.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+<view class="table">
+  <scroll-view scroll-x="true" class="tr bg-w">
+    <view class="th_N">产品</view>
+    <view class="th ">数量</view>
+    <view class="th">{{process1}}</view>
+    <view class="th ">{{process2}}</view>
+    <view class="th">{{process3}}</view>
+    <view class="th ">{{process4}}</view>
+S  </scroll-view>
+
+  <block wx:for="{{listData}}">
+   
+    <scroll-view scroll-x="true" class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      
+          <checkbox  wx:if="{{ifShowCheckBox}}" bindtap='ifCheck' data-row='{{index}}'/>
+
+      <view class="td_N">
+        <input value='{{item.model}}' bindinput="inputName" data-row='{{index}}'></input>
+      </view>
+      <view class="td" >
+        <input value='{{item.num}}' type="number" bindinput="inNum" data-row='{{index}}'></input>
+      </view>
+
+      <view class="td" wx:for="{{item.types}}" wx:for-index="idx">
+        <checkbox-group   bindchange="checkboxChange" data-row='{{index}}' data-col='{{idx}}'>
+          <checkbox checked='{{item.t}}'></checkbox>
+        </checkbox-group>
+
+      </view>
+
+
+    </scroll-view>
+    <scroll-view scroll-x="true" class="tr" wx:else>
+    
+          <checkbox wx:if="{{ifShowCheckBox}}"  bindtap='ifCheck' data-row='{{index}}'></checkbox>
+
+
+      <view class="td_N">
+        <input value='{{item.model}}' bindinput="inputName" data-row='{{index}}'></input>
+      </view>
+      <view class="td">
+        <input value='{{item.num}}' type="number" bindinput="inNum" data-row='{{index}}'></input>
+      </view>
+
+      <view class="td" wx:for="{{item.types}}" wx:for-index="idx">
+        <checkbox-group bindchange="checkboxChange" data-row='{{index}}' data-col='{{idx}}'>
+          <checkbox checked='{{item.t}}' disabled='{{ifModify}}'></checkbox>
+        </checkbox-group>
+
+      </view>
+    </scroll-view>
+  </block>
+
+</view>
+
+<view class="weui-cells__title">
+
+  <view class="section" style='font-size:18px'>
+    请修改订单完成时间:
+    <picker mode="date" value="{{date}}" start="2018-01-01" end="2100-09-01" bindchange="bindDateChange">
+      <view class="weui-cells__title" style='font-size:18px'>
+        {{finishTime}}
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="weui-cells__title" style='font-size:18px'>备注:
+  <input value='{{remark}}' bindinput='inputRemark'></input>
+</view>
+
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <view>
+    <view class="dialog-title">
+      请输入产品ID
+    </view>
+    <view class="input-view">
+      <input type="text" bindblur="inputPassword" class="input-style" />
+    </view>
+    <view class="line-top">
+    </view>
+    <view class="btn-view">
+      <view class="btn-cancel" bindtap="click_cancel">取 消 </view>
+      <view class="btn-line"></view>
+      <view class="btn-cancel" bindtap="click_ok">确 定</view>
+    </view>
+  </view>
+</view>
+
+
+  <button class='search-bt' bindtap='addList'>添加型号/add item</button>
+  <button class="search-bt" bindtap="delete">删除/delete</button>
+  <button class="search-bt" bindtap="save">提交/submit</button>

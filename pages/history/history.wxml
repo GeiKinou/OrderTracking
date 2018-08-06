@@ -1,0 +1,13 @@
+<view bindtap="bindViewTap" class="logo">
+  <image class="logo-avatar" mode='widthFix' src="../../images/logo.jpg" background-size="cover"></image>
+</view>
+
+<view wx:for="{{list}}" bindtap='click' data-model='{{item.id}}'>
+  <view class="weui-cell weui-cell_access" >
+    <view class="weui-cell__bd">
+      <view style="display: inline-block; vertical-align: middle">查询记录:</view>
+    </view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{item.id}}</view>
+  </view>
+</view>
+<button class="search-bt" bindtap='clearHistory'>清除历史浏览记录</button>

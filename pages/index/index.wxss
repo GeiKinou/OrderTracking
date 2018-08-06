@@ -1,0 +1,126 @@
+.input{
+    padding-left: 10px;
+    height: 44px;
+}
+
+.inputView{
+    border:  2px solid #003F82;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.logo-avatar {
+	width:60%;
+	height: 80rpx;
+  margin-top: 10rpx;
+  margin-right: 300rpx;
+	border-radius: 10%;
+}
+.logo {
+	display: flex;
+	flex-direction: column;
+	padding: 20rpx 0;
+	align-items: center;
+	background:white;
+}
+
+.search-bt{
+  margin-left: 30rpx; 
+  margin-right: 30rpx; 
+  margin-top: 50rpx; 
+  margin-bottom: 30rpx;
+  border-radius: 30rpx;
+  background-color: #003F82;
+  color: white;
+
+}
+
+.bg{
+  height:15%;
+  background:#003F82; 
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bottomText {
+  margin-bottom: 30rpx;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  /* margin-left: 30rpx;
+  margin-right: 30rpx; */
+    flex-direction: row;  
+  justify-content: center;  
+  width: 100%;
+}
+
+.link{
+  font-weight: bold;
+  text-align: center;
+  color:gray;
+  text-decoration-line: underline;
+}
+
+.text_link{
+  color: #003F82;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text{
+  color:#aab2bd;
+  margin-top: 10rpx;
+  text-align: center;
+  margin: auto 0%;
+  height: 44px;
+}
+
+.text1{
+  color:#aab2bd;
+   display: flex;
+  flex-direction: row;
+  text-align: left;
+  margin: auto 0%;
+  height: 44px;
+}
+.search-bt1:active{
+    opacity: .7;
+}
+.search-bt:active{
+    opacity: .7;
+}
+
+/*二级菜单外部容器样式*/
+.ddclass { 
+ position: absolute; 
+ width: 100%; 
+ margin-top: 10px; 
+ left: 0; 
+ background-color:#F5F5F5
+ 
+} 
+/*二级菜单普通样式*/
+  
+ .liclass { 
+ font-size: 14px; 
+ line-height: 34px; 
+ color: black; 
+ 
+ height: 34px; 
+ display: block; 
+ padding-left: 18px; 
+
+ border-bottom: 1px solid black; 
+} 
+  
+/*二级菜单高亮样式*/
+  
+ li.highlight { 
+ background-color: black; 
+ color: #48c23d; 
+}

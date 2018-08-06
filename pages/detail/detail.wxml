@@ -1,0 +1,51 @@
+<view class="table">
+  <scroll-view scroll-x="true" class="tr bg-w">
+    <view class="th_N">产品</view>
+    <view class="th ">数量</view>
+    <view class="th">{{process1}}</view>
+    <view class="th ">{{process2}}</view>
+    <view class="th">{{process3}}</view>
+    <view class="th ">{{process4}}</view>
+
+  </scroll-view>
+
+  <block wx:for="{{listData}}">
+    <scroll-view scroll-x="true" class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td_N">
+        <input value='{{item.id}}' disabled='{{true}}'></input>
+      </view>
+      <view class="td">
+        <input value='{{item.num}}' type="number" disabled='{{ifModify}}'></input>
+      </view>
+      
+      <view class="td" wx:for="{{item.types}}" wx:for-index="idx">
+        <checkbox-group bindchange="checkboxChange" data-row='{{index}}' data-col='{{idx}}'>
+          <checkbox checked='{{item.t}}' disabled='{{ifModify}}'></checkbox>
+        </checkbox-group>
+
+      </view>
+      
+
+    </scroll-view>
+    <scroll-view scroll-x="true" class="tr" wx:else>
+            <view class="td_N">
+        <input value='{{item.id}}' disabled='{{true}}'></input>
+      </view>
+      <view class="td">
+        <input value='{{item.num}}' type="number" disabled='{{ifModify}}'></input>
+      </view>
+      
+      <view class="td" wx:for="{{item.types}}" wx:for-index="idx">
+        <checkbox-group bindchange="checkboxChange" data-row='{{index}}' data-col='{{idx}}'>
+          <checkbox checked='{{item.t}}' disabled='{{ifModify}}'></checkbox>
+        </checkbox-group>
+
+      </view>
+    </scroll-view>
+  </block>
+
+</view>
+<view class="weui-cells__title" style='font-size:18px'>我们正在全力完成您的订单中</view>
+<view class="weui-cells__title" style='font-size:18px'>您的订单预计在{{finishTime}}完成</view>
+<view class="weui-cells__title" wx:if="{{ifModify}}" style='font-size:18px'>备注:{{remark}}</view>
+<view class="weui-cells__title" style='font-size:18px;margin-top:200px; text-align: center;'>注册登录后可保存您的查询记录</view>

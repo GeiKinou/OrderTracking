@@ -1,0 +1,89 @@
+/**issuse.wxss**/
+@import '/style/weui.wxss';
+.logo-avatar {
+	width:60%;
+	height: 80rpx;
+  margin-top: 10rpx;
+  margin-right: 300rpx;
+	border-radius: 10%;
+}
+.logo {
+	display: flex;
+	flex-direction: column;
+	padding: 20rpx 0;
+	align-items: center;
+	background:white;
+}
+.search-bt{
+  margin-left: 30rpx; 
+  margin-right: 30rpx; 
+  margin-top: 50rpx; 
+  margin-bottom: 30rpx;
+  border-radius: 30rpx;
+  background-color: #003F82;
+  color: white;
+
+}
+.search-bt:active{
+    opacity: .7;
+}
+.container{
+
+
+    height: 100%;
+    padding-top: 20rpx;
+    font-size: 11pt;
+     box-sizing: border-box; 
+}
+
+
+
+
+.issues-label{
+    font-size: 10pt;
+    line-height: 100%;
+    color: #999;
+     margin: 25rpx 20rpx 15rpx; 
+}
+.issues-panel{
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch; */
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.issues-input{
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15rpx 25rpx;
+}
+
+.issues-textarea{
+    width: 100%;
+     padding: 25rpx; 
+    min-height: 225rpx;
+    box-sizing: border-box;
+}
+
+
+.issues-remind {
+    flex: 1;
+    font-size: 9pt;
+    line-height: 135%;
+    color: #ccc;
+    padding: 0 30rpx;
+    word-break: break-all;
+    text-indent: 1em;
+    padding-top: 30rpx;
+}
+
+.search-bt1:active{
+    opacity: .7;
+}
+.search-bt:active{
+    opacity: .7;
+}
+
+

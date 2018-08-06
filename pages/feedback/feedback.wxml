@@ -1,0 +1,30 @@
+<import src="../../component/toastTest/toastTest.wxml" />
+<template is="toast" data="{{ ..._toast_ }}" />
+<view class='bg'>
+<view bindtap="bindViewTap" class="logo">
+  <image class="logo-avatar" mode='widthFix' src="../../images/logo.jpg" background-size="cover"></image>
+</view>
+<view class="container">
+
+
+  <block >
+    <text class="issues-label">反馈列表</text>
+    <form bindsubmit="submitForm">
+      <view class="issues-panel">
+        <view class="issues-input">
+          <input placeholder="请输入反馈标题" name="title" value="{{title}}" />
+        </view>
+        <textarea class="issues-textarea" cursor-spacing="50" placeholder="请输入反馈内容" name="content" value="{{content}}"></textarea>
+      </view>
+
+      <block>
+
+ 
+      </block>
+
+      <text class="issues-remind ">非常感谢您的宝贵意见，您的每一点意见和建议都会让我们变得更好</text>
+     <button class="search-bt" formType="submit">提交反馈</button>
+    </form>
+  </block>
+</view>
+</view>

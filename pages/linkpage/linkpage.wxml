@@ -1,0 +1,33 @@
+<view bindtap="bindViewTap" class="logo">
+  <image class="logo-avatar"  style="width:100%" mode='widthFix' src="../../images/head.jpg" background-size="cover"></image>
+</view>
+
+<view class="page">
+  <view class="page__hd">
+  </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">在这个电商横行的时代，电商获得的社会资源何其多，连快递面单撕单机都有企业研制生产。</view>
+      <view class="weui-article__h1">而制造业作为电商的上游产业，尤其是数量上占了制造业99%的中小企业，获得的社会资源何其少，而承担的社会责任又何其繁重。因此想要在如此激烈市场竞争中取胜，企业必须不断进行自身的升级。</view>
+      <view class="weui-article__h1">其中信息化，作为中小企业发展升级的必经之路，企业所付出的成本也是很高。动辄10万起的管理软件，高昂的学习成本，一板一眼的操作流程，导致有的企业即使买了，员工也不一定愿意用。</view>
+      <view class="weui-article__h1">因此，我们作为一家新兴的创业公司，联合工厂一线员工与国内知名互联网企业的工程师，来专为中小企业开发定制适用于工厂的软件。
+</view>
+ <view class="weui-article__h1">考虑到如今社会通讯的发达，现阶段我们可以通过微信小程序这个载体，更多地考虑工厂与客户、与供应商之间的连接，秉承“易上手，易用”的原则，开发过程由工厂员工全程参与，随时参考客户意见，以保证所开发app适用于工厂的真实需求。</view>
+      <view class="weui-article__h1">作为一个公众号，我们亦可汇集客户的需求，开发计时使用的软件，随用随付，从而真正降低中小企业的信息化成本。</view>
+     
+      <view class="weui-article__h1">您亦可推荐您的其他供应商或者客户使用此程序 以便随时掌握订单进度(点击右上角转发)</view>
+      <view style='text-align:center'>
+        <view>欢迎关注我们的公众号“e汇商服”</view>
+        <image class="weui-article__img" bindtap="previewImage" src="../../images/code.jpg" mode="widthFix" />
+  
+        </view>
+ <view style='text-align:center'>
+ <view> 我们的第一个小程序“订单跟踪系统”</view>
+        <image class="weui-article__img" bindtap="previewImage" src="../../images/123.jpg" mode="widthFix" />
+  
+        </view>
+
+      </view>
+    </view>
+
+  </view>
