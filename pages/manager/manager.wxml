@@ -22,7 +22,6 @@
   <button class="search-bt1" bindtap='ToSayabout'> 功能介绍</button>
   <button class="search-bt" bindtap='ToAbout'> 关于我们</button>
   <button class="search-bt" bindtap='ToFeedback'> 建议与反馈</button>
-  <button class="search-bt" style='opacity:{{opacity}}' bindtap="loginOut" disabled='{{bt_Ifable}}'> 注销</button>
 </view>
 <view class='text' style="margin-top:5%">
   <view> 欢迎关注我们的公众号 “e汇商服”</view>

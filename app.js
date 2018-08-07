@@ -43,6 +43,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    ifLogin:false
+    nickName: '',
+    avatarUrl: '',
   }
 })
