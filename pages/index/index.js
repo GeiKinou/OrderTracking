@@ -7,11 +7,6 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-
     bt_Ifable: true,
     id: '',
     order: 'sadsad',
@@ -19,24 +14,12 @@ Page({
   },
 
 
-  onLoad: function() {
-
-    
+  onLoad: function() { 
     var that = this;
     new app.ToastPannel();
-    var value = wx.getStorageSync("ifLogin")
-    if (value == true) {
-      console.log("登陆中");
-    } else {
-      var ifLogin = false;
-      wx.setStorageSync("ifLogin", ifLogin)
-      console.log("我设置了")
-    }
-
     var that = this
     var value = wx.getStorageSync("history")
     if (value != '') {
-      // console.log("我不是空的");
     } else {
       var array = this.data.history;
       wx.setStorageSync("history", array)
@@ -86,6 +69,7 @@ Page({
       })
     }
   },
+  
   searchClick: function() {
     var id = this.data.id;
     var that = this;
@@ -110,8 +94,7 @@ Page({
           if (res.data.code == "404") {
             that.show("订单号不存在")
           } else {
-            var value = wx.getStorageSync("ifLogin");
-            if (value==true){
+            if (app.globalData.userInfo){
               var obj = {};
               obj.id = that.data.id
               var history = wx.getStorageSync("history");

@@ -11,9 +11,11 @@
      <input placeholder='输入订单号' bindinput='inId'></input>
      </view>
   </view>
-  <scroll-view scroll-x="true" class="tr bg-w">
-    <view class="th_N"> <input  value='产品' disabled='{{true}}'></input></view>
-    <view class="th ">   <input  value='数量' disabled='{{true}}'></input></view>
+  <view class="tr bg-w">
+    <view class="th"> 
+    <input  value='产品' disabled='{{true}}'></input>
+    </view>
+    <view class="th "> <input  value='数量' disabled='{{true}}'></input></view>
     <view class="th">
       <input placeholder='添加' bindinput='inType1' value='{{type1}}'></input>
     </view>
@@ -23,18 +25,20 @@
     <view class="th">
       <input placeholder='添加' bindinput='inType3' value='{{type3}}'></input>
     </view>
-    <view class="th ">
+    <view class="th">
       <input placeholder='添加' bindinput='inType4' value='{{type4}}'></input>
     </view>
-  </scroll-view>
+  </view>
 </view>
 <block wx:for="{{listData}}">
-  <scroll-view scroll-x="true" class="tr bg-g">
-    <view class="td_N">
-      <input placeholder='添加' bindinput='inName' data-idx='{{index}}'></input>
+  <view  class="tr bg-g">
+    <view class="td">
+      <input placeholder='添加' value="{{item.model}}" wx:if="{{!show}}" bindinput='inName' data-idx='{{index}}'
+      bindblur='bindblurEvent'></input>
+        <view class="textchangeline" bindtap='touchview' wx:if="{{show}}">{{item.model}}</view>
     </view>
     <view class="td">
-      <input placeholder='添加' bindinput='inNum' data-idx='{{index}}'></input>
+      <input placeholder='添加' type='number' bindinput='inNum' data-idx='{{index}}'></input>
     </view>
     
     <view class="td" wx:for="{{item.types}}" wx:for-index="idx">
@@ -43,7 +47,7 @@
       </checkbox-group>
    
     </view>
-  </scroll-view>
+  </view>
 </block>
 <view class="weui-cells weui-cells_after-title" wx:if="{{!ifMoren}}">
   <view class="weui-cell weui-cell_switch">
@@ -53,7 +57,8 @@
     </view>
   </view>
 </view>
-<!-- <view class="weui-cells__title" ><input placeholder='输入完成时间' bindinput='inputTime'></input></view> -->
+
+
 <view class="section">
   <picker mode="date" value="{{date}}" start="2018-01-01" end="2100-09-01" bindchange="bindDateChange">
     <view class="weui-cells__title" style='font-size:18px' >

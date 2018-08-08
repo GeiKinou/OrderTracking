@@ -1,23 +1,33 @@
 <import src="../../component/toastTest/toastTest.wxml" />
 <template is="toast" data="{{ ..._toast_ }}" />
 <view class="table">
-  <scroll-view scroll-x="true" class="tr bg-w">
-    <view class="th_N">产品</view>
+  <view class="tr bg-w">
+    <view class="th">产品</view>
     <view class="th ">数量</view>
-    <view class="th">{{process1}}</view>
-    <view class="th ">{{process2}}</view>
-    <view class="th">{{process3}}</view>
-    <view class="th ">{{process4}}</view>
-S  </scroll-view>
+    <view class="th">
+    
+    <view class='textchangeline'> {{process1}}</view>
+    </view>
+    <view class="th ">
+    <view class='textchangeline'> {{process2}}</view>
+    </view>
+    <view class="th">
+    <view class='textchangeline'> {{process3}}</view>
+    </view>
+    <view class="th ">
+    <view class='textchangeline'> {{process4}}</view>
+    </view>
+  </view>
 
   <block wx:for="{{listData}}">
    
-    <scroll-view scroll-x="true" class="tr bg-g" wx:if="{{index % 2 == 0}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       
-          <checkbox  wx:if="{{ifShowCheckBox}}" bindtap='ifCheck' data-row='{{index}}'/>
+      <checkbox  wx:if="{{ifShowCheckBox}}" bindtap='ifCheck' data-row='{{index}}'/>
 
-      <view class="td_N">
-        <input value='{{item.model}}' bindinput="inputName" data-row='{{index}}'></input>
+      <view class="td">
+        <input value='{{item.model}}' wx:if="{{show}}" bindinput="inputName" data-row='{{index}}' bindblur='bindblurEvent'></input>
+        <view class="textchangeline" bindtap='touchview' wx:if="{{!show}}">{{item.model}}</view>
       </view>
       <view class="td" >
         <input value='{{item.num}}' type="number" bindinput="inNum" data-row='{{index}}'></input>
@@ -31,14 +41,15 @@ S  </scroll-view>
       </view>
 
 
-    </scroll-view>
-    <scroll-view scroll-x="true" class="tr" wx:else>
+    </view>
+    <view class="tr" wx:else>
     
-          <checkbox wx:if="{{ifShowCheckBox}}"  bindtap='ifCheck' data-row='{{index}}'></checkbox>
+      <checkbox wx:if="{{ifShowCheckBox}}"  bindtap='ifCheck' data-row='{{index}}'></checkbox>
 
 
-      <view class="td_N">
-        <input value='{{item.model}}' bindinput="inputName" data-row='{{index}}'></input>
+      <view class="td">
+         <input value='{{item.model}}' wx:if="{{show}}" bindinput="inputName" data-row='{{index}}' bindblur='bindblurEvent'></input>
+        <view class="textchangeline" bindtap='touchview' wx:if="{{!show}}">{{item.model}}</view>
       </view>
       <view class="td">
         <input value='{{item.num}}' type="number" bindinput="inNum" data-row='{{index}}'></input>
@@ -50,7 +61,7 @@ S  </scroll-view>
         </checkbox-group>
 
       </view>
-    </scroll-view>
+    </view>
   </block>
 
 </view>

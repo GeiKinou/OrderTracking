@@ -12,3 +12,13 @@
 	align-items: center;
 	background:white;
 }
+
+.tr{
+  display: flex;
+  direction: row;
+}
+
+.table{
+  margin-bottom:10rpx; 
+  border:5rpx solid black
+}

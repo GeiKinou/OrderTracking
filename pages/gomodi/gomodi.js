@@ -14,7 +14,7 @@ Page({
 
     ],
     ifDelete:[],
-
+    show:false,
     ifShowCheckBox:false,
     process1:'',
     process2: '',
@@ -306,6 +306,7 @@ Page({
     lists.push(newData); //实质是添加lists数组内容，使for循环多一次  
     this.setData({
       listData: lists,
+      show:true
     })
   },
   checkboxChange: function (res) {
@@ -407,5 +408,15 @@ Page({
       title: 'e汇商服',
       path: '/pages/gomodi/gomodi'
     }
-  }  
+  },
+  touchview: function () {
+    this.setData({
+      show: true
+    })
+  },
+  bindblurEvent: function () {
+    this.setData({
+      show: false
+    })
+  }
 })

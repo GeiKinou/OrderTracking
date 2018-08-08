@@ -4,6 +4,7 @@ Page({
 
   data: {
     //判断是否显示
+    show:false,
     showTopTips: false,
     //提示信息
     TopTips: '',
@@ -94,6 +95,7 @@ Page({
     lists.push(newData); //实质是添加lists数组内容，使for循环多一次  
     this.setData({
       listData: lists,
+      show:false
     })
   },
   delList: function() {
@@ -168,10 +170,12 @@ Page({
     var a = res.detail.value
     var idx = res.currentTarget.dataset.idx;
     var lists = this.data.listData;
+    console.log(a)
     lists[idx].model = a;
     this.setData({
       listData: lists
     })
+    console.log(lists)
 
   },
 
@@ -335,6 +339,16 @@ Page({
       title: 'e汇商服',
       path: '/page/user?id=123'
     }
-  }  
+  } ,
+  touchview: function () {
+    this.setData({
+      show: false
+    })
+  },
+  bindblurEvent: function () {
+    this.setData({
+      show: true
+    })
+  }
 
 })

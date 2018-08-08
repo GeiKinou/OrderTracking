@@ -24,7 +24,6 @@ Page({
       },
       header: {
         'content-type': 'application/json'
-        // 'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
       },
 
       success: function (res) {

@@ -131,7 +131,8 @@ Page({
       url: 'https://www.8ev8.cn/Order_Tracking/findOrders',
       method: "GET",
       data: {
-        userId: userid,
+        // userId: userid,
+        userId: 1
       },
       header: {
         'content-type': 'application/json',
